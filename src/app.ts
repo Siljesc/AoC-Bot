@@ -12,6 +12,7 @@ const PREFIX = '%'
 async function getSolutions(channel: TextChannel, day: number, author: User){
 
   const messages = await channel.fetchMessages()
+  // I'm making the assumption all the solutions will have the same structure
   const solutions = messages.filter(m => m.content.includes(`Day: ${day}`))
 
   const solutionsData = solutions.map(m => {
