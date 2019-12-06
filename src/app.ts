@@ -42,8 +42,9 @@ async function getSolutions(channel: TextChannel, day: number, author: User){
 }
 
 client.on('message', async message => {
-
-  if (message.author.username !== 'SunriseM') return;
+  //TODO: Protect command
+  //if (message.author.username !== 'SunriseM') return;
+ 
   if (!message.content.trim().startsWith(PREFIX)) return;
 
   const [cmd, ...args] = message.content.slice(1).split(/\s+/)
